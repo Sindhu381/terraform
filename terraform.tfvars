@@ -1,5 +1,5 @@
-aws_access_key = "AKIATV3IGZFMK6SZNS7Y"
-aws_secret_key = "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"
+aws_access_key = "---------------------"
+aws_secret_key = "-------------"
 aws_region = "us-east-1"
 vpc_cidr = "10.2.0.0/16"
 vpc_name = "terraform-aws-testing"
