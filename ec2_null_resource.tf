@@ -8,7 +8,7 @@ resource "null_resource" "filecopy" {
       type = "ssh"
       user = "ubuntu"
       private_key = "${file("aws2key.pem")}"
-      host = "${element(aws_instance.public-servers.*.public_ip,count)}"
+      host = "${element(aws_instance.public-servers.*.public_ip,count.index)}"
     }
   }
     provisioner "remote-exec"{
@@ -25,7 +25,7 @@ resource "null_resource" "filecopy" {
       type = "ssh"
       user = "ubuntu"
       private_key = "${file("aws2key.pem")}"
-      host = "${element(aws_instance.public-servers.*.public_ip,count)}"
+      host = "${element(aws_instance.public-servers.*.public_ip,count.index)}"
     }
     }
 }
